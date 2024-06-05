@@ -1,9 +1,12 @@
 #include <iostream>
 
-using namespace std;
+#include <windows.h>
 
-int main()
+#include "gamewindow.h"
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdLine, int iCmdShow)
 {
-    cout << "Hello World!" << endl;
+    GameWindow gameWindow(hInstance);
+    gameWindow.Show();
     return 0;
 }
